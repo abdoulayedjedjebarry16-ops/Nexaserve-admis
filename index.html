@@ -122,10 +122,10 @@
     const daysLeft = (d) => d ? Math.ceil((new Date(d)-new Date())/(86400000)) : null;
 
     const PLANS = {
-      essai:   { label:"Essai",   prix:0,      color:"chip-blue"   },
-      starter: { label:"Starter", prix:50000,  color:"chip-gold"   },
-      pro:     { label:"Pro",     prix:100000, color:"chip-purple" },
-      premium: { label:"Premium", prix:200000, color:"chip-green"  },
+      essai:   { label:"Essai gratuit", prix:0,      color:"chip-blue",   desc:"14 jours · 1 salle · 3 employés"       },
+      basic:   { label:"Basic",         prix:150000, color:"chip-gold",   desc:"1 salle · 3 employés · 1 service"       },
+      pro:     { label:"Pro 🔥",        prix:200000, color:"chip-purple", desc:"3 salles · 10 employés · Tous services" },
+      premium: { label:"Premium",       prix:400000, color:"chip-green",  desc:"Tout illimité"                          },
     };
     const ROLES_TEAM = {
       superadmin:{ label:"Super Admin", emoji:"👑" },
