@@ -197,7 +197,7 @@
         <div className="field">
           {label&&<label>{label}{required&&" *"}</label>}
           <div className="input-wrap">
-            <input className={`inp${isPass?" inp-icon":""}`} type={isPass&&!show?"password":isPass?"text":type} value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder} disabled={disabled} />
+            <input className={`inp${isPass?" inp-icon":""}`} type={isPass&&!show?"password":isPass?"text":type} value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder} disabled={disabled} autoComplete="off" />
             {isPass&&<button className="inp-btn" type="button" onClick={()=>setShow(!show)}>{show?"🙈":"👁️"}</button>}
           </div>
         </div>
@@ -920,7 +920,7 @@
             footer={<><button className="btn btn-ghost" onClick={()=>setShowCreate(false)}>Annuler</button><button className="btn btn-gold" onClick={createMember}>Créer</button></>}>
             <FieldInp label="Prénom" value={f.prenom} onChange={v=>setF(x=>({...x,prenom:v}))} required/>
             <FieldInp label="Nom" value={f.nom} onChange={v=>setF(x=>({...x,nom:v}))} required/>
-            <FieldInp label="Email" value={f.email} onChange={v=>setF(x=>({...x,email:v}))} type="email" required/>
+            <FieldInp label="Email" value={f.email} onChange={v=>setF(x=>({...x,email:v}))} placeholder="exemple@email.com" required/>
             <div className="field"><label>Rôle *</label>
               <select className="inp" value={f.role} onChange={e=>setF(x=>({...x,role:e.target.value}))}>
                 <option value="support">Support Client</option>
